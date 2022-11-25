@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CafeteriaCliente.ViewModels"
+             x:Class="ClienteCafe.HacerPedido" Background="#F6E9C9">
+             
+    <ContentPage.BindingContext>
+        <vm:ClienteViewModels></vm:ClienteViewModels>
+    </ContentPage.BindingContext>
+             
+    <ScrollView>
+        <StackLayout>
+            <Image Source="tl5.png"  WidthRequest="450"></Image>
+            <Label HorizontalOptions="Center" Margin="0,-30,0,0" FontSize="45" FontFamily="Aichella" TextColor="#55251B">PEDIDO</Label>
+            <Label FontFamily="Adriana Juliewis" Margin="10,0,0,0" FontSize="30" TextColor="#8C472A">Numero de Mesa</Label>
+            <Entry Text="{Binding Platillo.NumeroMesa}" Margin="20,0,50,20" FontFamily="Adriana Juliewis"  Keyboard="Numeric" FontSize="20"></Entry>
+          
+            <Image Source="waffle.jpg" WidthRequest="210" Margin="0,0,140,0"></Image>
+            <Label Text="Waffles"  Margin="80,0,0,0" FontFamily="Adriana Juliewis" FontSize="30"  TextColor="#8C472A"></Label>
+            <Entry Text="{Binding Platillo.CantidadPlatillos1}" Margin="20,0,50,20" Keyboard="Numeric"  FontFamily="Adriana Juliewis"  FontSize="20" ></Entry>
+            
+            <Image Source="crepa.jpg"  WidthRequest="200" Margin="0,0,-150,0"></Image>
+            <Label Text="Crepas"  Margin="240,0,0,0" FontFamily="Adriana Juliewis" FontSize="30"  TextColor="#8C472A"></Label>
+            <Entry Text="{Binding Platillo.CantidadPlatillos2}" Margin="20,0,50,20" Keyboard="Numeric" FontFamily="Adriana Juliewis"  FontSize="20"></Entry>
+            
+            <Image Source="cafe.jpg"  WidthRequest="210" Margin="0,0,140,0"></Image>
+            <Label Text="Cafe"  Margin="100,0,0,0" FontFamily="Adriana Juliewis" FontSize="30"  TextColor="#8C472A"></Label>
+            <Entry Text="{Binding Platillo.CantidadPlatillos3}" Margin="20,0,50,20" Keyboard="Numeric" FontFamily="Adriana Juliewis"  FontSize="20"></Entry>
+            
+            <Image Source="frape.png"  WidthRequest="210" Margin="0,0,-150,0"></Image>
+            <Label Text="Frape"  Margin="240,0,0,0" FontFamily="Adriana Juliewis" FontSize="30"  TextColor="#8C472A"></Label>
+            <Entry Text="{Binding Platillo.CantidadPlatillos4}" Margin="20,0,40,20" Keyboard="Numeric" FontFamily="Adriana Juliewis"  FontSize="20"></Entry>
+            
+            <Button Command="{Binding EnviarCommand}" BorderColor="White" FontSize="18" BorderWidth="3" CornerRadius="20" HorizontalOptions="Center" Margin="0,20,0,20" WidthRequest="300" Text="Enviar" FontFamily="Aichella"  Background="#C48A4B"></Button>
+
+
+        </StackLayout>
+    </ScrollView>
+       
+   
+</ContentPage>
