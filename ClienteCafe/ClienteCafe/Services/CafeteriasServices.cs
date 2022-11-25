@@ -16,7 +16,7 @@ namespace ClienteCafeteria.Droid.Services
         HttpClient cliente = new HttpClient();
         public CafeteriasServices()
         {
-            cliente.BaseAddress = new Uri("https://9f70-2806-108e-21-4f1f-b4e0-bb97-6034-f0ba.ngrok.io/pedidos/");
+            cliente.BaseAddress = new Uri("https://db06-187-209-230-156.ngrok.io/pedidos/");
         }
         public async Task PedidoPOST(Platillo p)
         {

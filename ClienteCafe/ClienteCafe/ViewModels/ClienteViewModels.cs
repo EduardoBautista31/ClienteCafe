@@ -14,12 +14,12 @@ namespace CafeteriaCliente.ViewModels
         CafeteriasServices servicio = new CafeteriasServices();
         public ICommand EnviarCommand { get; set; }
         
-        public Platillo Platillo = new Platillo();
+        public Platillo Platillo { get; set; }
 
         public string Error = "";
         public ClienteViewModels()
         {
-           
+            Platillo = new Platillo();
             EnviarCommand = new Command(Enviar);
            
 
@@ -31,13 +31,9 @@ namespace CafeteriaCliente.ViewModels
         {
             try
             {
-                Platillo entidad = new Platillo();
-                entidad.NumeroMesa = Platillo.NumeroMesa;
-                entidad.CantidadPlatillos1 = Platillo.CantidadPlatillos1;
-                entidad.CantidadPlatillos2 = Platillo.CantidadPlatillos2;
-                entidad.CantidadPlatillos3 = Platillo.CantidadPlatillos3;
-                entidad.CantidadPlatillos4 = Platillo.CantidadPlatillos4;
-               await servicio.PedidoPOST(entidad);
+                
+                
+               await servicio.PedidoPOST(Platillo);
               
                
                
